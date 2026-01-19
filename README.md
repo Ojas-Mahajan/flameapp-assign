@@ -1,47 +1,46 @@
 # Real-Time Collaborative Drawing Canvas
-
-A multi-user drawing application with real-time synchronization using WebSockets. Multiple users can draw simultaneously on the same canvas with instant updates.
+A browser-based collaborative whiteboard where multiple users can draw together in real-time with brush/eraser tools, undo/redo, and multi-user color indicators.
 
 ## 🚀 Features
 
-- Real-time drawing synchronization across all connected users
-- Drawing tools: Brush, eraser, color picker, stroke width adjustment
-- Global undo/redo operations (synchronized across users)
-- User cursors visible to all participants
-- Online user indicators with unique color assignments
-- Custom canvas implementation (no external drawing libraries)
+✏️ Freehand drawing with smoothing
 
+🧽 Eraser tool
+
+🎨 Color picker & brush size control
+
+✨ Assigned user colors
+
+👥 See other users' cursors live
+
+↩️ Global undo & redo
+
+⏱ Real-time networking via WebSockets
+
+🔄 Consistent history replay for late joins
 ## 🛠️ Setup Instructions
 
 ### Installation
+# Install & Run
 
-```bash
-# Clone repository
+## 1. Clone repo
 git clone https://github.com/Ojas-Mahajan/FlameApp_Assign.git
 cd FlameApp_Assign
 
-# Install server dependencies
+## 2. Install dependencies
+
+# Backend:
 cd server
 npm install
+npm start
 
-# Install client dependencies
+# Frontend:
 cd ../client
 npm install
-```
-
-### Running the Application
-
-```bash
-# Terminal 1 - Start server
-cd server
 npm start
-# Server runs on http://localhost:3000
 
-# Terminal 2 - Start client
-cd client
-npm start
-# Client opens at http://localhost:5173
-```
+## 3. Access App
+# Open http://localhost:5173 in multiple browser tabs/windows.
 
 ## 🧪 Testing with Multiple Users
 
@@ -71,17 +70,25 @@ npm start
 
 ## ⏱️ Development Timeline
 
-**Total Time:** ~18-20 hours
+**Total Time:**
 
-- **Day 1:** Project setup, canvas implementation, drawing tools (5h)
-- **Day 2:** WebSocket integration, real-time sync, user management (6h)
-- **Day 3:** Global undo/redo, conflict resolution, cursor tracking (5h)
-- **Day 4:** UI polish, testing, bug fixes, documentation (3h)
+12 hours total, broken down as:
 
+Canvas APIs: 2.5h
+
+Real-time WebSockets: 2h
+
+Tools UI: 2h
+
+Undo/Redo + history: 3.5h
+
+Documentation: 1h
+
+Debug/Polish: 1
 ## 📚 Tech Stack
 
-**Frontend:** React.js, HTML5 Canvas API, Socket.io-client, Vite  
-**Backend:** Node.js, Express.js, Socket.io
+**Frontend:** React (CRA), HTML5 Canvas API, Socket.io-client
+**Backend:** Node.js, Express.js, Socket.io,In-memory stroke history
 
 ## 📖 Documentation
 
