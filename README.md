@@ -87,7 +87,4 @@ npm start
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed technical documentation.
 
-## 📧 Contact
 
-**Developer:** Ojas Mahajan  
-**GitHub:** [@Ojas-Mahajan](https://github.com/Ojas-Mahajan)
