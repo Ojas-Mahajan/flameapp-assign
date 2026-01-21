@@ -2,16 +2,28 @@
 
 A browser-based collaborative whiteboard where multiple users can draw together in real-time with brush/eraser tools, undo/redo, and multi-user color indicators.
 
+---
+
+## 🌐 Live Demo (Deployed)
+
+🔗 **Try it here:** https://flameapp-assign-e5t8.vercel.app/
+
+*(Open in multiple tabs to test real-time collaboration!)*
+
+---
+
 ## 🚀 Features
 
 - ✏️ Freehand drawing with smoothing
 - 🧽 Eraser tool
 - 🎨 Color picker & brush size control
 - ✨ Assigned user colors
-- 👥 See other users' cursors live
+- 👥 Live multi-user cursor tracking
 - ↩️ Global undo & redo
 - ⏱ Real-time networking via WebSockets
 - 🔄 Consistent history replay for late joins
+
+---
 
 ## 🛠️ Setup Instructions
 
@@ -20,8 +32,8 @@ A browser-based collaborative whiteboard where multiple users can draw together 
 #### 1. Clone repo
 
 ```bash
-git clone https://github.com/Ojas-Mahajan/FlameApp_Assign.git
-cd FlameApp_Assign
+git clone https://github.com/Ojas-Mahajan/flameapp-assign.git
+cd flameapp-assign
 ```
 
 #### 2. Install dependencies
@@ -44,53 +56,79 @@ npm start
 
 #### 3. Access App
 
-Open http://localhost:5173 in multiple browser tabs/windows.
+Open `http://localhost:5173` in multiple browser tabs/windows.
 
-### Testing
+---
 
-#### Local Testing:
-- Open the app in multiple browser windows/tabs or use incognito mode
-- Start drawing - you'll see real-time synchronization
+## 🧪 Testing Guide
 
-#### Network Testing:
-- Find your local IP (`ipconfig` on Windows, `ifconfig` on Mac/Linux)
-- Update WebSocket URL in client to your IP address
-- Access from other devices on the same network
+### Local Testing:
+- Open multiple browser windows/tabs (or incognito)
+- Start drawing to see peer sync
 
-#### Test Features:
-- Drawing with different colors and stroke widths
-- Eraser functionality
-- Global undo/redo operations
-- User cursor tracking
-- Multiple simultaneous users (3+)
+### Network Testing:
+- Find local IP via `ipconfig` / `ifconfig`
+- Update WebSocket URL in client to local IP
+- Test from phones/laptops on same WiFi
+
+### Test Scenarios:
+✔ Color + Line width changes  
+✔ Eraser mode  
+✔ Undo/Redo (global)  
+✔ Cursor tracking  
+✔ 3+ simultaneous users  
+
+---
 
 ## 🐛 Known Limitations
 
-1. Initial sync for new users may be slow with extensive canvas drawings
-2. Mobile touch events less smooth than desktop experience
-3. High latency (>200ms) causes noticeable delays
-4. Rapid concurrent undo operations may occasionally cause sync issues
-5. Tested primarily on Chrome/Firefox; Safari may have minor differences
+1. Initial sync for large drawings can lag
+2. Touch events less smooth on mobile
+3. High latency networks cause cursor delay
+4. Rapid global undo operations may desync history
+5. Safari has minor inconsistency vs Chrome/Firefox
 
-## ⏱️ Development Timeline
+---
 
-**Total Time:** 12 hours
+## ⏱ Development Timeline
+
+**Total Time Invested:** ~12 hours
 
 Breakdown:
-- Canvas APIs: 2.5h
-- Real-time WebSockets: 2h
-- Tools UI: 2h
-- Undo/Redo + history: 3.5h
-- Documentation: 1h
-- Debug/Polish: 1h
+- Canvas APIs — 2.5h
+- WebSockets Integration — 2h
+- Tools & UI — 2h
+- Undo/Redo System — 3.5h
+- Documentation — 1h
+- Debug & Polish — 1h
+
+---
 
 ## 📚 Tech Stack
 
-**Frontend:** React (CRA), HTML5 Canvas API, Socket.io-client
+**Frontend:**
+- React (CRA)
+- HTML5 Canvas API
+- Socket.io-client
 
-**Backend:** Node.js, Express.js, Socket.io, In-memory stroke history
+**Backend:**
+- Node.js
+- Express.js
+- Socket.io
+- In-memory stroke history
+
+---
 
 ## 📖 Documentation
 
-See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed technical documentation.
+See `ARCHITECTURE.md` for detailed technical documentation.
+
+---
+
+## 👤 Author
+
+**Ojas Mahajan**  
+🔗 GitHub: https://github.com/Ojas-Mahajan  
+📧 Contact available upon request
+
 
